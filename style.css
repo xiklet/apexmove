@@ -13,6 +13,7 @@ body{
     background:#f7f8fa;
     color:#222;
     line-height:1.6;
+    overflow-x:hidden;
 }
 
 .container{
@@ -21,124 +22,277 @@ body{
     margin:auto;
 }
 
-/* HEADER */
+
+/* ================= HEADER ================= */
 
 header{
+
     position:fixed;
     top:0;
     left:0;
+
     width:100%;
-    background:#ffffff;
+
+    background:#fff;
+
     z-index:999;
+
     box-shadow:0 3px 10px rgba(0,0,0,.15);
 }
 
+
 header .container{
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     padding:18px 0;
 }
 
+
 .logo img{
+
     height:55px;
+    width:auto;
+
 }
+
+
+nav{
+
+    display:flex;
+    align-items:center;
+}
+
 
 nav a{
+
     text-decoration:none;
-    color:white;
+
+    color:#04197a;
+
     margin-left:35px;
-    font-weight:500;
+
+    font-weight:600;
+
     transition:.3s;
+
 }
+
 
 nav a:hover{
+
     color:#C8A14B;
+
 }
 
-/* HERO */
+
+
+/* ================= HERO ================= */
+
 
 .hero{
+
     height:100vh;
+
+    margin-top:90px;
+
     background:url("images/hero.jpg") center center/cover no-repeat;
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
+
     text-align:center;
+
     position:relative;
+
 }
+
 
 .overlay{
+
     position:absolute;
+
     inset:0;
+
     background:rgba(8,26,55,.72);
+
 }
+
 
 .hero-content{
+
     position:relative;
+
     color:white;
+
     max-width:800px;
+
     padding:20px;
+
 }
+
 
 .hero h1{
+
     font-size:60px;
+
+    line-height:1.2;
+
     margin-bottom:20px;
+
     font-weight:700;
+
 }
+
 
 .hero p{
+
     font-size:22px;
+
     color:#ddd;
+
     margin-bottom:40px;
+
 }
+
 
 .btn{
+
     display:inline-block;
+
     background:#C8A14B;
+
     color:white;
+
     padding:18px 42px;
+
     border-radius:50px;
+
     text-decoration:none;
+
     font-weight:600;
+
     transition:.3s;
+
 }
+
 
 .btn:hover{
+
     background:white;
+
     color:#0B2D5C;
+
 }
+
+
+
+/* ================= SERVICES ================= */
+
+
+.services{
+
+    padding:100px 0;
+
+    background:#f7f8fa;
+
+    text-align:center;
+
+}
+
+
+.services h2{
+
+    color:#20489b;
+
+    font-size:36px;
+
+    margin-bottom:20px;
+
+}
+
+
+.services-text{
+
+    max-width:700px;
+
+    margin:0 auto 40px;
+
+}
+
+
+.services-image{
+
+    width:100%;
+
+    max-width:900px;
+
+    height:auto;
+
+    border-radius:25px;
+
+}
+
+
+
+/* ================= CONTACT ================= */
+
 
 .contact{
+
     padding:100px 0;
+
     background:#fff;
+
 }
+
 
 .contact h2{
+
     color:#20489b;
+
     margin-bottom:30px;
-    font-size:2rem;
+
+    font-size:36px;
+
     font-weight:700;
+
 }
 
+
+
 .contact form{
+
     display:flex;
+
     flex-direction:column;
+
     gap:18px;
+
 }
+
 
 .contact input,
 .contact textarea{
 
+
     width:100%;
+
     padding:22px 25px;
 
     border:none;
+
     border-radius:22px;
 
     background:#edf2fb;
 
     font-family:'Poppins',sans-serif;
+
     font-size:16px;
 
     resize:none;
@@ -146,60 +300,207 @@ nav a:hover{
     outline:none;
 
     transition:.3s;
+
 }
+
+
 
 .contact input:focus,
 .contact textarea:focus{
 
     background:#fff;
+
     box-shadow:0 0 0 2px #2f56b0;
+
 }
+
+
 
 .checkbox{
 
     display:flex;
+
     align-items:flex-start;
+
     gap:12px;
 
     font-size:14px;
+
     color:#555;
+
 }
+
 
 .checkbox input{
 
     width:18px;
+
     height:18px;
+
     margin-top:3px;
+
 }
+
 
 .checkbox a{
 
     color:#20489b;
+
     text-decoration:underline;
+
 }
+
+
 
 .contact button{
 
     width:100%;
+
     padding:18px;
 
     border:none;
+
     border-radius:20px;
 
     background:#2f56b0;
-    color:#fff;
+
+    color:white;
 
     font-size:18px;
+
     font-weight:600;
 
     cursor:pointer;
 
     transition:.3s;
+
 }
+
+
 
 .contact button:hover{
 
     background:#23479a;
+
 }
 
-/* SE
+
+
+/* ================= FOOTER ================= */
+
+
+footer{
+
+    background:#04197a;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px 20px;
+
+}
+
+
+
+/* ================= MOBILE ================= */
+
+
+@media(max-width:768px){
+
+
+    header .container{
+
+        flex-direction:column;
+
+        padding:12px 0;
+
+        gap:10px;
+
+    }
+
+
+    .logo img{
+
+        height:45px;
+
+    }
+
+
+    nav{
+
+        width:100%;
+
+        justify-content:center;
+
+        gap:15px;
+
+    }
+
+
+    nav a{
+
+        margin-left:0;
+
+        font-size:13px;
+
+    }
+
+
+    .hero{
+
+        height:90vh;
+
+        margin-top:110px;
+
+    }
+
+
+    .hero h1{
+
+        font-size:34px;
+
+    }
+
+
+    .hero p{
+
+        font-size:18px;
+
+        margin-bottom:30px;
+
+    }
+
+
+    .btn{
+
+        padding:15px 30px;
+
+    }
+
+
+    .services,
+    .contact{
+
+        padding:70px 0;
+
+    }
+
+
+    .services h2,
+    .contact h2{
+
+        font-size:28px;
+
+    }
+
+
+    .contact input,
+    .contact textarea{
+
+        padding:18px;
+
+    }
+
+
+}
